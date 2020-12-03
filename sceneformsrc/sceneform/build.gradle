@@ -34,9 +34,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-        beta {
-            matchingFallbacks = ['release']
-        }
     }
 
 }
