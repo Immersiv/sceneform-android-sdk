@@ -16,7 +16,6 @@ public final class RenderingResources {
     PLANE_MATERIAL,
     PLANE,
     VIEW_RENDERABLE_MATERIAL,
-    VIEW_RENDERABLE_MATERIAL_ALPHA,
   };
 
   
@@ -43,8 +42,6 @@ public final class RenderingResources {
         return LoadHelper.drawableResourceNameToIdentifier(context, "sceneform_plane");
       case VIEW_RENDERABLE_MATERIAL:
         return LoadHelper.rawResourceNameToIdentifier(context, "sceneform_view_material");
-      case VIEW_RENDERABLE_MATERIAL_ALPHA:
-        return LoadHelper.rawResourceNameToIdentifier(context, "sceneform_view_material_alpha");
     }
     return 0;
   }
