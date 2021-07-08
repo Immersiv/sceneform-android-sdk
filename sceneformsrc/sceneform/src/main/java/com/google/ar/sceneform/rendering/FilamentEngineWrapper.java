@@ -2,6 +2,7 @@ package com.google.ar.sceneform.rendering;
 
 import com.google.android.filament.Camera;
 import com.google.android.filament.Engine;
+import com.google.android.filament.EntityManager;
 import com.google.android.filament.Fence;
 import com.google.android.filament.IndexBuffer;
 import com.google.android.filament.IndirectLight;
@@ -83,7 +84,7 @@ public class FilamentEngineWrapper implements IEngine {
 
   @Override
   public Camera createCamera() {
-    return engine.createCamera();
+    return engine.createCamera(EntityManager.get().create());
   }
 
   @Override
@@ -92,8 +93,8 @@ public class FilamentEngineWrapper implements IEngine {
   }
 
   @Override
-  public void destroyCamera(Camera camera) {
-    engine.destroyCamera(camera);
+  public void destroyCamera(int entity) {
+    engine.destroyCameraComponent(entity);
   }
 
   @Override
